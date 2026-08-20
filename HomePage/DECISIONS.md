@@ -1,17 +1,25 @@
 # Decisions
 
-## 1. Why this ingestion strategy over the obvious alternative?
+## 1. Why this ingestion strategy over the obvious alternative you rejected?
 
-We already had a working AcdyOn homepage, so the job was to ingest the existing brand into a Product Hunt–style first screen — not to invent a new company.
+The obvious approach was to create a visually impressive hero using a large wordmark, stock imagery, and multiple competing CTAs. I rejected that because it can look premium while still leaving the visitor unclear about what AcdyOn offers.
 
-The obvious alternative was a huge wordmark, a stock photo, and two competing buttons. That looks premium and explains almost nothing in three seconds. We ingested the product instead: one value prop, one CTA (`Find your path`), a mock Pathways console in the hero, and a real click-through selector below it. Copy stays at the level we can defend (doctoral, executive, program discovery). We did not ingest fake stats, logos, or testimonials, even though that is the faster way to look “launched.”
+Instead, I focused the first screen around one clear value proposition, one primary CTA (`Find Your Path`), and a visual representation of AcdyOn's pathways. The interactive PathFinder below the hero lets visitors explore Doctoral Programs, Executive Education, and program discovery.
 
-## 2. One trade-off under the time limit, and what a real week would change
+I deliberately avoided fabricated statistics, testimonials, university logos, rankings, or other claims that I could not verify.
 
-Trade-off: the hero console is a designed mock, and consultation is an honest front-end demo that does not send mail. That ships a product feeling without a backend, CMS, or verified contact channel.
+## 2. One trade-off you made under the time limit, and what you’d do with a real week.
 
-With a week: replace the mock with a real screenshot or a live pathway flow, connect consultation to a real AcdyOn destination, add 390 / 768 / 1440 visual QA on a device, and deploy from CI. Still no dark mode unless it is designed end-to-end.
+The hero pathway console is a designed frontend demonstration rather than a live product flow, and the consultation interaction is intentionally frontend-only.
 
-## 3. Where AI was used, and what was verified afterward
+This allowed me to focus the limited time on visual quality, responsiveness, interaction, and clear communication without introducing an unverified backend or contact system.
 
-Cursor drafted layout, copy options, and component splits. I kept the AcdyOn palette, type, and honesty rules; removed default Vite/Bolt metadata; deleted `localStorage` returning-user logic; fixed broken `@/data` and missing `acdyon-hero.png`; pointed the logo at `src/assets/acdyon-logo.png`; and checked that hashes, the one primary CTA, and the “nothing was sent” form match what the page actually does.
+With a full week, I would replace the demonstration with verified AcdyOn program data or a real pathway flow, connect the consultation CTA to an official AcdyOn destination, and perform dedicated visual QA at 390px, 768px, and 1440px. I would also add CI-based deployment checks.
+
+## 3. Where did you use AI tools, and what did you personally verify or change afterward?
+
+I used Cursor to accelerate layout exploration, copy iterations, and component structure.
+
+I personally reviewed and modified the generated implementation, including the AcdyOn visual system, responsive layout, component structure, interactive PathFinder, metadata, asset paths, logo integration, navigation links, and consultation behavior.
+
+I also verified that the page does not contain fabricated statistics, testimonials, logos, or partnerships, and that the consultation interaction accurately indicates that no information is submitted.
